@@ -13,7 +13,7 @@ public class TicketRepository {
     private JdbcTemplate db;
 
     public void saveTicket( Ticket innTicket ){
-        String sql = "INSERT INTO Ticket ( film, antall, fornavn, etternavn, telefonnr, epost) VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO Ticket ( film, antall, fornavn, etternavn, t  elefonnr, epost) VALUES(?,?,?,?,?,?)";
         db.update(sql,innTicket.getFilm(),innTicket.getAntall(),innTicket.getFornavn(),innTicket.getEtternavn(),innTicket.gettelefonnr(),innTicket.getEpost());
     }
     public List<Ticket> getAllTickets(){
