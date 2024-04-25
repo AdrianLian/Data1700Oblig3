@@ -17,7 +17,7 @@ public class TicketRepository {
         db.update(sql,innTicket.getFilm(),innTicket.getAntall(),innTicket.getFornavn(),innTicket.getEtternavn(),innTicket.gettelefonnr(),innTicket.getEpost());
     }
     public List<Ticket> getAllTickets(){
-        String sql = "SELECT * FROM Ticket ORDER BY etternavnz";
+        String sql = "SELECT * FROM Ticket ORDER BY etternavn";
         List<Ticket> allTickets = db.query(sql, new BeanPropertyRowMapper(Ticket.class));
         return allTickets;
     }
